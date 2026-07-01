@@ -1,0 +1,21 @@
+# generated data & warehouse (rebuild with `make data` / `make warehouse`)
+data/
+*.duckdb
+*.duckdb.wal
+
+# python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+
+# notebooks
+.ipynb_checkpoints/
+
+# os / editors
+.DS_Store
+.idea/
+.vscode/
