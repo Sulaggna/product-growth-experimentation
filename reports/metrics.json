@@ -746,6 +746,19 @@
       "converged": true
     }
   },
+  "estimator_coverage": {
+    "runs": 40,
+    "exp1_coverage": 0.95,
+    "exp1_mean_z": -0.3100059496300688,
+    "exp1_naive_bias_pp": 0.0053389302555613746,
+    "exp1_srm_detection_rate": 1.0,
+    "exp1_srm_false_alarm_rate": 0.0,
+    "exp2_coverage": 0.9,
+    "exp2_mean_z": 0.23160507509258185,
+    "exp2_rmse_cuped": 0.2218321997008647,
+    "exp2_rmse_raw": 0.31941282953475436,
+    "exp2_mean_variance_reduction": 0.5644111956736632
+  },
   "figures": [
     "01_engagement_trend.png",
     "02_acquisition_by_channel.png",
@@ -765,7 +778,8 @@
     "16_retention_offer_policy.png",
     "17_channel_unit_economics.png",
     "18_spend_response.png",
-    "19_budget_reallocation.png"
+    "19_budget_reallocation.png",
+    "20_estimator_coverage.png"
   ],
-  "runtime_s": 9.3
+  "runtime_s": 7.1
 }
