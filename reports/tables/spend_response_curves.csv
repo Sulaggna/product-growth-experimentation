@@ -1,0 +1,4 @@
+channel,elasticity,elasticity_ci_low,elasticity_ci_high,r2,days,avg_daily_spend,avg_daily_signups,avg_cost_per_signup,marginal_cost_per_signup
+paid_social,0.831917,0.743107,0.920727,0.897682,396,360.037,112.189,3.20919,3.85758
+search,0.75456,0.617826,0.891294,0.740352,396,177.371,59.3333,2.98941,3.96179
+influencer,0.855509,0.831652,0.879366,0.932174,396,272.111,48.5884,5.60033,6.54619

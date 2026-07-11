@@ -1,0 +1,771 @@
+{
+  "generated_from": "simulated data (see docs/methodology.md)",
+  "seed": 11,
+  "observation_end": "2026-01-31",
+  "overview": {
+    "users": 149317,
+    "paying_subscribers": 9587,
+    "first_signup": "2025-01-01",
+    "last_signup": "2026-01-31",
+    "events": 5778551
+  },
+  "engagement": {
+    "avg_dau": 2711.1961852861036,
+    "avg_mau": 16149.83378746594,
+    "avg_stickiness": 0.16798640726597872,
+    "peak_dau": 4022,
+    "peak_dau_date": "2026-01-19",
+    "stickiness_first_month": 0.09935710538389966,
+    "stickiness_last_month": 0.15575763209861937,
+    "mau_last_month": 22902,
+    "months": 13
+  },
+  "funnel": {
+    "overall": [
+      {
+        "stage": "Signed up",
+        "users": 130538,
+        "step_conversion": null,
+        "cumulative_conversion": 1.0
+      },
+      {
+        "stage": "Completed onboarding",
+        "users": 75646,
+        "step_conversion": 0.5794940936738727,
+        "cumulative_conversion": 0.5794940936738727
+      },
+      {
+        "stage": "Saw paywall",
+        "users": 75345,
+        "step_conversion": 0.9960209396399017,
+        "cumulative_conversion": 0.5771882516968239
+      },
+      {
+        "stage": "Started free trial",
+        "users": 14643,
+        "step_conversion": 0.19434600836153693,
+        "cumulative_conversion": 0.11217423279045183
+      },
+      {
+        "stage": "Became paying subscriber",
+        "users": 8725,
+        "step_conversion": 0.5958478453868743,
+        "cumulative_conversion": 0.06683877491611638
+      }
+    ],
+    "biggest_drop": {
+      "stage": "Started free trial",
+      "step_conversion": 0.19434600836153693
+    }
+  },
+  "retention": {
+    "d7": 0.3504518357803383,
+    "d30": 0.1459728201749682,
+    "d30_by_channel": {
+      "influencer": 0.09832294000121088,
+      "organic": 0.1708613302741554,
+      "paid_social": 0.10882253754961219,
+      "referral": 0.21994134897360704,
+      "search": 0.1580823121613045
+    }
+  },
+  "activation": {
+    "feature": "active_days_first_7d",
+    "k": 3,
+    "youden_j": 0.5296489481508069,
+    "share_users_reaching": 0.3657708866383735,
+    "retention_if_reached": 0.3264917167570737,
+    "retention_if_not": 0.04186445386575836,
+    "retention_ratio": 7.798781223899276
+  },
+  "exp1_design": {
+    "baseline_cohorts": "mobile signups 2025-07-01 to 2025-08-31",
+    "baseline_d7": 0.36647062182378803,
+    "mde_abs": 0.025,
+    "mde_rel": 0.06821829230289811,
+    "alpha": 0.05,
+    "power": 0.8,
+    "n_per_arm": 5908,
+    "daily_eligible_signups": 282.46774193548384,
+    "runtime_days_needed": 42,
+    "runtime_days_planned": 42
+  },
+  "exp1": {
+    "n_exposed": 13860,
+    "srm_overall": {
+      "n_control": 7133,
+      "n_treatment": 6727,
+      "share_treatment": 0.48535353535353537,
+      "chi2": 11.892929292929294,
+      "p_value": 0.0005634743522173226
+    },
+    "srm_by_platform": {
+      "ios": {
+        "n_control": 2812,
+        "n_treatment": 2843,
+        "share_treatment": 0.5027409372236958,
+        "chi2": 0.16993810786914235,
+        "p_value": 0.680166819024277
+      },
+      "android": {
+        "n_control": 3505,
+        "n_treatment": 3497,
+        "share_treatment": 0.49942873464724363,
+        "chi2": 0.009140245644101685,
+        "p_value": 0.9238345863166417
+      },
+      "web": {
+        "n_control": 816,
+        "n_treatment": 387,
+        "share_treatment": 0.32169576059850374,
+        "chi2": 152.9850374064838,
+        "p_value": 3.859605884882222e-35
+      }
+    },
+    "naive_primary": {
+      "metric": "D7 retention (all platforms, naive)",
+      "control": 0.3601570166830226,
+      "treatment": 0.4037460978147763,
+      "abs_diff": 0.04358908113175369,
+      "rel_diff": 0.12102799366010085,
+      "ci_low": 0.027415738383350735,
+      "ci_high": 0.05976242388015665,
+      "p_value": 1.289041085660073e-07,
+      "n_control": 7133,
+      "n_treatment": 6727,
+      "method": "two-proportion z-test"
+    },
+    "web_only_primary": {
+      "metric": "D7 retention (web only, biased)",
+      "control": 0.2696078431372549,
+      "treatment": 0.3875968992248062,
+      "abs_diff": 0.11798905608755134,
+      "rel_diff": 0.4376321353065541,
+      "ci_low": 0.06069000204207882,
+      "ci_high": 0.17528811013302387,
+      "p_value": 3.436944354530452e-05,
+      "n_control": 816,
+      "n_treatment": 387,
+      "method": "two-proportion z-test"
+    },
+    "analysis_population": "iOS + Android (web excluded: exposure-logging bug)",
+    "n_analysis": 12657,
+    "achieved_mde": 0.024071439541733113,
+    "primary": {
+      "metric": "D7 retention",
+      "control": 0.37185372803545985,
+      "treatment": 0.40473186119873816,
+      "abs_diff": 0.03287813316327831,
+      "rel_diff": 0.08841684427093618,
+      "ci_low": 0.0159069716546865,
+      "ci_high": 0.049849294671870124,
+      "p_value": 0.00014778660810276368,
+      "n_control": 6317,
+      "n_treatment": 6340,
+      "method": "two-proportion z-test"
+    },
+    "secondary": [
+      {
+        "metric": "Onboarding completion",
+        "control": 0.6001266423935412,
+        "treatment": 0.7246056782334385,
+        "abs_diff": 0.12447903583989728,
+        "rel_diff": 0.20742127918771594,
+        "ci_low": 0.10814372304263295,
+        "ci_high": 0.1408143486371616,
+        "p_value": 1.3017722421335063e-49,
+        "n_control": 6317,
+        "n_treatment": 6340,
+        "method": "two-proportion z-test",
+        "p_holm": 3.905316726400519e-49
+      },
+      {
+        "metric": "Trial start <= 7 days",
+        "control": 0.1228431217350008,
+        "treatment": 0.13501577287066246,
+        "abs_diff": 0.012172651135661669,
+        "rel_diff": 0.09909102735048293,
+        "ci_low": 0.0004984108445261898,
+        "ci_high": 0.023846891426797148,
+        "p_value": 0.04103712386895583,
+        "n_control": 6317,
+        "n_treatment": 6340,
+        "method": "two-proportion z-test",
+        "p_holm": 0.04103712386895583
+      },
+      {
+        "metric": "D30 retention",
+        "control": 0.15703656799113502,
+        "treatment": 0.17981072555205047,
+        "abs_diff": 0.022774157560915442,
+        "rel_diff": 0.14502454970998271,
+        "ci_low": 0.009741181797499361,
+        "ci_high": 0.035807133324331525,
+        "p_value": 0.000619408536023951,
+        "n_control": 6317,
+        "n_treatment": 6340,
+        "method": "two-proportion z-test",
+        "p_holm": 0.001238817072047902
+      }
+    ],
+    "guardrails": [
+      {
+        "metric": "Trial-to-paid conversion",
+        "control": 0.6056701030927835,
+        "treatment": 0.5782710280373832,
+        "abs_diff": -0.02739907505540029,
+        "rel_diff": -0.045237621793597076,
+        "ci_low": -0.07511422305728901,
+        "ci_high": 0.02031607294648844,
+        "p_value": 0.26082546440818277,
+        "n_control": 776,
+        "n_treatment": 856,
+        "method": "two-proportion z-test",
+        "harm_p_one_sided": 0.13041273220409139,
+        "harm_p_holm": 0.26082546440818277,
+        "breached": false,
+        "margin": -0.03,
+        "ci_within_margin": false
+      },
+      {
+        "metric": "Crashes per session (7d)",
+        "control": 0.003979595528381751,
+        "treatment": 0.004148487232672913,
+        "abs_diff": 0.00016889170429116186,
+        "rel_diff": 0.04243941453010914,
+        "ci_low": -0.0008907973887334504,
+        "ci_high": 0.0012285807973157741,
+        "p_value": 0.7547546316544522,
+        "n_control": 6317,
+        "n_treatment": 6340,
+        "method": "delta-method z-test",
+        "harm_p_one_sided": 0.3773773158272261,
+        "harm_p_holm": 0.3773773158272261,
+        "breached": false,
+        "margin": 0.001,
+        "ci_within_margin": false
+      }
+    ],
+    "segments": [
+      {
+        "dimension": "platform",
+        "segment": "android",
+        "metric": "platform=android",
+        "control": 0.34236804564907275,
+        "treatment": 0.3943380040034315,
+        "abs_diff": 0.05196995835435875,
+        "rel_diff": 0.1517955866933562,
+        "ci_low": 0.02940612549882904,
+        "ci_high": 0.07453379120988846,
+        "p_value": 6.548255434771537e-06,
+        "n_control": 3505,
+        "n_treatment": 3497,
+        "method": "two-proportion z-test",
+        "p_bh": 4.583778804340076e-05
+      },
+      {
+        "dimension": "platform",
+        "segment": "ios",
+        "metric": "platform=ios",
+        "control": 0.4086059743954481,
+        "treatment": 0.4175167077031305,
+        "abs_diff": 0.008910733307682384,
+        "rel_diff": 0.02180764322123835,
+        "ci_low": -0.016754803766155395,
+        "ci_high": 0.03457627038152016,
+        "p_value": 0.4962299104718464,
+        "n_control": 2812,
+        "n_treatment": 2843,
+        "method": "two-proportion z-test",
+        "p_bh": 0.4962299104718464
+      },
+      {
+        "dimension": "acquisition_channel",
+        "segment": "influencer",
+        "metric": "acquisition_channel=influencer",
+        "control": 0.27532777115613827,
+        "treatment": 0.32903981264637,
+        "abs_diff": 0.05371204149023173,
+        "rel_diff": 0.19508399484980268,
+        "ci_low": 0.010047241597843863,
+        "ci_high": 0.0973768413826196,
+        "p_value": 0.01613939544986725,
+        "n_control": 839,
+        "n_treatment": 854,
+        "method": "two-proportion z-test",
+        "p_bh": 0.03765858938302358
+      },
+      {
+        "dimension": "acquisition_channel",
+        "segment": "organic",
+        "metric": "acquisition_channel=organic",
+        "control": 0.42823306489815255,
+        "treatment": 0.4445539674716609,
+        "abs_diff": 0.016320902573508378,
+        "rel_diff": 0.038112196164464804,
+        "ci_low": -0.013895976925647622,
+        "ci_high": 0.046537782072664374,
+        "p_value": 0.28979498665028025,
+        "n_control": 2111,
+        "n_treatment": 2029,
+        "method": "two-proportion z-test",
+        "p_bh": 0.33809415109199364
+      },
+      {
+        "dimension": "acquisition_channel",
+        "segment": "paid_social",
+        "metric": "acquisition_channel=paid_social",
+        "control": 0.3079748163693599,
+        "treatment": 0.33814432989690724,
+        "abs_diff": 0.03016951352754732,
+        "rel_diff": 0.09796097578109914,
+        "ci_low": 0.0006279158999764299,
+        "ci_high": 0.05971111115511821,
+        "p_value": 0.045484046388081796,
+        "n_control": 1906,
+        "n_treatment": 1940,
+        "method": "two-proportion z-test",
+        "p_bh": 0.07959708117914314
+      },
+      {
+        "dimension": "acquisition_channel",
+        "segment": "referral",
+        "metric": "acquisition_channel=referral",
+        "control": 0.4779050736497545,
+        "treatment": 0.5090609555189456,
+        "abs_diff": 0.031155881869191104,
+        "rel_diff": 0.06519261582902659,
+        "ci_low": -0.02497211653138945,
+        "ci_high": 0.08728388026977166,
+        "p_value": 0.27684956730155785,
+        "n_control": 611,
+        "n_treatment": 607,
+        "method": "two-proportion z-test",
+        "p_bh": 0.33809415109199364
+      },
+      {
+        "dimension": "acquisition_channel",
+        "segment": "search",
+        "metric": "acquisition_channel=search",
+        "control": 0.3941176470588235,
+        "treatment": 0.4593406593406593,
+        "abs_diff": 0.0652230122818358,
+        "rel_diff": 0.16549122519271772,
+        "ci_low": 0.019097736845578667,
+        "ci_high": 0.11134828771809294,
+        "p_value": 0.005716764109244963,
+        "n_control": 850,
+        "n_treatment": 910,
+        "method": "two-proportion z-test",
+        "p_bh": 0.020008674382357372
+      }
+    ],
+    "interaction_android_vs_ios": {
+      "diff_in_diff": 0.043059225046676364,
+      "z": 2.4695706248529103,
+      "p_value": 0.013527531296277377
+    },
+    "decision": {
+      "ship": true,
+      "reason": "Primary metric improved with the 95% CI excluding zero and no guardrail showed significant harm."
+    },
+    "impact": {
+      "annual_mobile_signups": 117793,
+      "extra_d7_retained_users": 3872.8139397020423,
+      "extra_d7_retained_users_ci": [
+        1873.7299121204867,
+        5871.897967283598
+      ],
+      "extra_trials": 1433.853095222995,
+      "extra_paid_subscribers": 868.4419520036181,
+      "extra_ltv_24m_usd": 82812.36493155235,
+      "assumptions": "trial lift x control trial->paid rate x blended 24m LTV; trial lift CI is wide"
+    }
+  },
+  "exp2": {
+    "n_exposed": 5952,
+    "srm": {
+      "n_control": 2969,
+      "n_treatment": 2983,
+      "share_treatment": 0.5011760752688172,
+      "chi2": 0.03293010752688172,
+      "p_value": 0.8560013891542368
+    },
+    "pre_period_balance": {
+      "metric": "Pre-period workouts (A/A)",
+      "control": 10.598854833277198,
+      "treatment": 11.285283271873952,
+      "abs_diff": 0.6864284385967547,
+      "rel_diff": 0.06476439666307883,
+      "ci_low": 0.10708454491179009,
+      "ci_high": 1.2657723322817194,
+      "p_value": 0.02022828644771773,
+      "n_control": 2969,
+      "n_treatment": 2983,
+      "method": "Welch t-test"
+    },
+    "distribution": {
+      "mean": 7.448084677419355,
+      "median": 1.0,
+      "p99": 51.0,
+      "share_zero": 0.4880712365591398,
+      "top10pct_share_of_workouts": 0.4652274931763326,
+      "skewness": 2.382949748993102
+    },
+    "raw": {
+      "metric": "Workouts / user (28d), raw",
+      "control": 6.889525092623779,
+      "treatment": 8.004022795843111,
+      "abs_diff": 1.1144977032193326,
+      "rel_diff": 0.16176698513117568,
+      "ci_low": 0.529183589001885,
+      "ci_high": 1.6998118174367802,
+      "p_value": 0.00019121122709598044,
+      "n_control": 2969,
+      "n_treatment": 2983,
+      "method": "Welch t-test",
+      "boot_ci_low": 0.531655402281278,
+      "boot_ci_high": 1.6978405982390172
+    },
+    "cuped": {
+      "metric": "Workouts / user (28d), CUPED",
+      "control": 6.889525092623779,
+      "treatment": 7.4835562780180975,
+      "abs_diff": 0.5940311853943188,
+      "rel_diff": 0.0862223705419571,
+      "ci_low": 0.20655737356767906,
+      "ci_high": 0.9815049972209584,
+      "p_value": 0.0026633505712444342,
+      "n_control": 2969,
+      "n_treatment": 2983,
+      "method": "CUPED + Welch t-test",
+      "boot_ci_low": 0.1982314366167692,
+      "boot_ci_high": 0.9920209760917983,
+      "theta": 0.7582240020372529,
+      "variance_reduction": 0.5622774920625604,
+      "corr": 0.7498516467025731
+    },
+    "ci_width_reduction": 0.33800705909051276,
+    "secondary_active_days": {
+      "metric": "Active days / user (28d), CUPED",
+      "control": 5.23509599191647,
+      "treatment": 5.4644504410112615,
+      "abs_diff": 0.2293544490947914,
+      "rel_diff": 0.04381093478494729,
+      "ci_low": 0.006729306710246102,
+      "ci_high": 0.45197959147933675,
+      "p_value": 0.04346769080197512,
+      "n_control": 2969,
+      "n_treatment": 2983,
+      "method": "CUPED + Welch t-test"
+    },
+    "weekly": [
+      {
+        "week": 1,
+        "metric": "week 1",
+        "control": 1.9683395082519366,
+        "treatment": 2.2430731159027406,
+        "abs_diff": 0.27473360765080423,
+        "rel_diff": 0.1395763314707799,
+        "ci_low": 0.14263878608536562,
+        "ci_high": 0.40682842921624285,
+        "p_value": 4.617829469696157e-05,
+        "n_control": 2969,
+        "n_treatment": 2983,
+        "method": "CUPED + Welch t-test"
+      },
+      {
+        "week": 2,
+        "metric": "week 2",
+        "control": 1.776018861569552,
+        "treatment": 1.9727424569892411,
+        "abs_diff": 0.1967235954196891,
+        "rel_diff": 0.11076661384431195,
+        "ci_low": 0.06125446496112072,
+        "ci_high": 0.33219272587825743,
+        "p_value": 0.004431683035117327,
+        "n_control": 2969,
+        "n_treatment": 2983,
+        "method": "CUPED + Welch t-test"
+      },
+      {
+        "week": 3,
+        "metric": "week 3",
+        "control": 1.629504883799259,
+        "treatment": 1.7415539956986295,
+        "abs_diff": 0.1120491118993705,
+        "rel_diff": 0.06876267325945247,
+        "ci_low": -0.01704675343315462,
+        "ci_high": 0.24114497723189562,
+        "p_value": 0.0889009014217944,
+        "n_control": 2969,
+        "n_treatment": 2983,
+        "method": "CUPED + Welch t-test"
+      },
+      {
+        "week": 4,
+        "metric": "week 4",
+        "control": 1.5156618390030314,
+        "treatment": 1.5261867094274855,
+        "abs_diff": 0.010524870424454047,
+        "rel_diff": 0.006944075620045348,
+        "ci_low": -0.11706507435456412,
+        "ci_high": 0.1381148152034722,
+        "p_value": 0.8715396219226808,
+        "n_control": 2969,
+        "n_treatment": 2983,
+        "method": "CUPED + Welch t-test"
+      }
+    ],
+    "steady_state_weekly": {
+      "metric": "Workouts / user / week (weeks 3-4), CUPED",
+      "control": 1.572583361401145,
+      "treatment": 1.633870352563057,
+      "abs_diff": 0.06128699116191183,
+      "rel_diff": 0.038972173219043955,
+      "ci_low": -0.049140247734403494,
+      "ci_high": 0.17171423005822717,
+      "p_value": 0.27663934339520185,
+      "n_control": 2969,
+      "n_treatment": 2983,
+      "method": "CUPED + Welch t-test"
+    },
+    "novelty_decay_share": 0.7769221185352406,
+    "decision": {
+      "ship": true,
+      "reason": "CUPED-adjusted lift is significant; plan on the smaller steady-state effect (weeks 3-4), not the launch-week spike."
+    }
+  },
+  "validation_vs_truth": {
+    "exp1_d7": {
+      "estimate": 0.03287813316327831,
+      "truth": 0.03579047167575255,
+      "z_error": -0.3363398926687066,
+      "ci_covers_truth": true
+    },
+    "exp1_naive_d7": {
+      "estimate": 0.04358908113175369,
+      "truth_all_platforms": 0.033738665916918535
+    },
+    "exp1_web_only": {
+      "estimate": 0.11798905608755134,
+      "truth": 0.017197452229299363
+    },
+    "exp2_workouts": {
+      "estimate_cuped": 0.5940311853943188,
+      "estimate_raw": 1.1144977032193326,
+      "truth": 0.6056787634408602,
+      "z_error": -0.058917100876550395,
+      "ci_covers_truth": true
+    },
+    "exp2_weekly": {
+      "estimate": [
+        0.27473360765080423,
+        0.1967235954196891,
+        0.1120491118993705,
+        0.010524870424454047
+      ],
+      "truth": [
+        0.2762096774193548,
+        0.16313844086021506,
+        0.09223790322580645,
+        0.07409274193548387
+      ]
+    }
+  },
+  "revenue": {
+    "mrr_end_usd": 58684.728333329214,
+    "subscribers_end": 6357,
+    "net_revenue_total_usd": 524958.180000013,
+    "avg_logo_churn_last_4m": 0.0608427196918427
+  },
+  "churn_model": {
+    "n_train": 3335,
+    "n_test": 1608,
+    "base_rate_train": 0.37901049475262366,
+    "base_rate_test": 0.3681592039800995,
+    "split_date": "2025-09-01",
+    "models": {
+      "Logistic regression": {
+        "cv_roc_auc": 0.7043559263243465,
+        "test_roc_auc": 0.7220951266226856,
+        "test_pr_auc": 0.5512477215075136,
+        "test_brier": 0.2003075117405127
+      },
+      "Gradient boosting": {
+        "cv_roc_auc": 0.6754031333850826,
+        "test_roc_auc": 0.7032181049159395,
+        "test_pr_auc": 0.5290934208924483,
+        "test_brier": 0.2062182843501539
+      }
+    },
+    "selected_model": "Logistic regression",
+    "top_decile_lift": 1.6870908175256,
+    "top_30pct_capture": 0.4560810810810811,
+    "policy": {
+      "threshold": 0.31,
+      "breakeven_probability": 0.3257132086223205,
+      "share_targeted": 0.6169154228855721,
+      "value_per_1k_model": 1265.230149253731,
+      "value_per_1k_target_all": 512.2082835820894,
+      "value_per_1k_target_none": 0.0,
+      "assumptions": {
+        "discount_usd": 6.5,
+        "save_rate": 0.3,
+        "redeem_rate_non_churners": 0.6,
+        "extra_months_if_saved": 3.0
+      },
+      "uplift_vs_target_all": 753.0218656716416
+    }
+  },
+  "marketing": {
+    "total_spend_usd": 320569.5199999999,
+    "blended_cac_usd": 69.41739281074057,
+    "best_channel": "search",
+    "best_ltv_to_cac": 2.2427888643604996,
+    "worst_channel": "influencer",
+    "worst_ltv_to_cac": 0.636896816106344,
+    "by_channel": [
+      {
+        "channel": "influencer",
+        "signups": 19241,
+        "spend_usd": 107755.92000000003,
+        "paid_subscribers": 855,
+        "signup_to_paid_rate": 0.044436359856556314,
+        "net_arpu_month_usd": 7.932024191755217,
+        "monthly_churn_rate": 0.08798138924711986,
+        "cost_per_signup_usd": 5.600328465256485,
+        "cac_usd": 126.03031578947372,
+        "ltv_24m_usd": 80.2683068591929,
+        "ltv_to_cac": 0.636896816106344,
+        "payback_months": null
+      },
+      {
+        "channel": "organic",
+        "signups": 48271,
+        "spend_usd": 0.0,
+        "paid_subscribers": 3639,
+        "signup_to_paid_rate": 0.07538687824988088,
+        "net_arpu_month_usd": 8.176807910983964,
+        "monthly_churn_rate": 0.06796815429573864,
+        "cost_per_signup_usd": null,
+        "cac_usd": null,
+        "ltv_24m_usd": 98.0900480821496,
+        "ltv_to_cac": null,
+        "payback_months": null
+      },
+      {
+        "channel": "paid_social",
+        "signups": 44427,
+        "spend_usd": 142574.4899999999,
+        "paid_subscribers": 2174,
+        "signup_to_paid_rate": 0.048934206676120376,
+        "net_arpu_month_usd": 8.172307429205834,
+        "monthly_churn_rate": 0.08721346704871165,
+        "cost_per_signup_usd": 3.209185630359914,
+        "cac_usd": 65.58164213431458,
+        "ltv_24m_usd": 83.21834444969835,
+        "ltv_to_cac": 1.2689274275758893,
+        "payback_months": 13.189228774914318
+      },
+      {
+        "channel": "referral",
+        "signups": 13882,
+        "spend_usd": 0.0,
+        "paid_subscribers": 1330,
+        "signup_to_paid_rate": 0.09580752053018297,
+        "net_arpu_month_usd": 8.052046524075957,
+        "monthly_churn_rate": 0.05102634255683852,
+        "cost_per_signup_usd": null,
+        "cac_usd": null,
+        "ltv_24m_usd": 112.90534851732984,
+        "ltv_to_cac": null,
+        "payback_months": null
+      },
+      {
+        "channel": "search",
+        "signups": 23496,
+        "spend_usd": 70239.11,
+        "paid_subscribers": 1589,
+        "signup_to_paid_rate": 0.06762853251617297,
+        "net_arpu_month_usd": 8.069386256799806,
+        "monthly_churn_rate": 0.06529725327061864,
+        "cost_per_signup_usd": 2.9894071331290433,
+        "cac_usd": 44.20334172435494,
+        "ltv_24m_usd": 99.1387625869051,
+        "ltv_to_cac": 2.2427888643604996,
+        "payback_months": 6.555741436256085
+      }
+    ],
+    "response_curves": [
+      {
+        "channel": "paid_social",
+        "elasticity": 0.8319169722844363,
+        "elasticity_ci_low": 0.7431068753082494,
+        "elasticity_ci_high": 0.9207270692606232,
+        "r2": 0.8976824816326303,
+        "days": 396,
+        "avg_daily_spend": 360.0365909090909,
+        "avg_daily_signups": 112.18939393939394,
+        "avg_cost_per_signup": 3.209185630359916,
+        "marginal_cost_per_signup": 3.8575792263830393
+      },
+      {
+        "channel": "search",
+        "elasticity": 0.7545599359314785,
+        "elasticity_ci_low": 0.6178261224602554,
+        "elasticity_ci_high": 0.8912937494027017,
+        "r2": 0.7403519472852027,
+        "days": 396,
+        "avg_daily_spend": 177.3714898989899,
+        "avg_daily_signups": 59.333333333333336,
+        "avg_cost_per_signup": 2.9894071331290433,
+        "marginal_cost_per_signup": 3.961788839794047
+      },
+      {
+        "channel": "influencer",
+        "elasticity": 0.8555090264023835,
+        "elasticity_ci_low": 0.8316524340185636,
+        "elasticity_ci_high": 0.8793656187862033,
+        "r2": 0.9321737167186991,
+        "days": 396,
+        "avg_daily_spend": 272.1109090909091,
+        "avg_daily_signups": 48.58838383838384,
+        "avg_cost_per_signup": 5.600328465256483,
+        "marginal_cost_per_signup": 6.546194478867372
+      }
+    ],
+    "reallocation": {
+      "budget": 320569.51999999996,
+      "paid_subscribers_change": 499.72016760825227,
+      "paid_subscribers_change_pct": 0.10821138319797585,
+      "ltv_change_usd": 60096.54691111902,
+      "ltv_change_pct": 0.14762922429075664,
+      "blended_cac_old": 69.41739281074057,
+      "blended_cac_new": 62.6391263103641,
+      "converged": true
+    }
+  },
+  "figures": [
+    "01_engagement_trend.png",
+    "02_acquisition_by_channel.png",
+    "03_funnel.png",
+    "04_cohort_retention.png",
+    "05_retention_by_channel.png",
+    "06_activation_threshold.png",
+    "07_exp1_srm.png",
+    "08_exp1_effects.png",
+    "09_exp1_segments.png",
+    "10_exp2_cuped.png",
+    "11_exp2_novelty.png",
+    "12_mrr.png",
+    "13_churn_model_performance.png",
+    "14_churn_calibration_lift.png",
+    "15_churn_importance.png",
+    "16_retention_offer_policy.png",
+    "17_channel_unit_economics.png",
+    "18_spend_response.png",
+    "19_budget_reallocation.png"
+  ],
+  "runtime_s": 9.3
+}

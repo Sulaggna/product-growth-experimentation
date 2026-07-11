@@ -1,0 +1,5 @@
+week,metric,control,treatment,abs_diff,rel_diff,ci_low,ci_high,p_value,n_control,n_treatment,method
+1,week 1,1.96834,2.24307,0.274734,0.139576,0.142639,0.406828,4.61783e-05,2969,2983,CUPED + Welch t-test
+2,week 2,1.77602,1.97274,0.196724,0.110767,0.0612545,0.332193,0.00443168,2969,2983,CUPED + Welch t-test
+3,week 3,1.6295,1.74155,0.112049,0.0687627,-0.0170468,0.241145,0.0889009,2969,2983,CUPED + Welch t-test
+4,week 4,1.51566,1.52619,0.0105249,0.00694408,-0.117065,0.138115,0.87154,2969,2983,CUPED + Welch t-test

@@ -1,0 +1,16 @@
+platform,stage,users,step_conversion,cumulative_conversion
+android,Signed up,63688,,1
+android,Completed onboarding,35914,0.563905,0.563905
+android,Saw paywall,35932,1.0005,0.564188
+android,Started free trial,6333,0.17625,0.0994379
+android,Became paying subscriber,3581,0.565451,0.0562272
+ios,Signed up,52828,,1
+ios,Completed onboarding,33028,0.625199,0.625199
+ios,Saw paywall,32534,0.985043,0.615848
+ios,Started free trial,7323,0.225088,0.13862
+ios,Became paying subscriber,4617,0.630479,0.0873968
+web,Signed up,14022,,1
+web,Completed onboarding,6704,0.478106,0.478106
+web,Saw paywall,6879,1.0261,0.490586
+web,Started free trial,987,0.14348,0.0703894
+web,Became paying subscriber,527,0.533941,0.0375838

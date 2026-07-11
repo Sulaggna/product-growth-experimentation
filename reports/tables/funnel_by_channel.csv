@@ -1,0 +1,26 @@
+acquisition_channel,stage,users,step_conversion,cumulative_conversion
+influencer,Signed up,16517,,1
+influencer,Completed onboarding,8535,0.51674,0.51674
+influencer,Saw paywall,8545,1.00117,0.517346
+influencer,Started free trial,1415,0.165594,0.0856693
+influencer,Became paying subscriber,757,0.534982,0.0458316
+organic,Signed up,42713,,1
+organic,Completed onboarding,26257,0.614731,0.614731
+organic,Saw paywall,26104,0.994173,0.611149
+organic,Started free trial,5418,0.207554,0.126847
+organic,Became paying subscriber,3339,0.616279,0.0781729
+paid_social,Signed up,38549,,1
+paid_social,Completed onboarding,20585,0.533996,0.533996
+paid_social,Saw paywall,20469,0.994365,0.530987
+paid_social,Started free trial,3523,0.172114,0.0913902
+paid_social,Became paying subscriber,1980,0.562021,0.0513632
+referral,Signed up,12276,,1
+referral,Completed onboarding,8178,0.666178,0.666178
+referral,Saw paywall,8155,0.997188,0.664304
+referral,Started free trial,1880,0.230533,0.153144
+referral,Became paying subscriber,1204,0.640426,0.0980775
+search,Signed up,20483,,1
+search,Completed onboarding,12091,0.590294,0.590294
+search,Saw paywall,12072,0.998429,0.589367
+search,Started free trial,2407,0.199387,0.117512
+search,Became paying subscriber,1445,0.600332,0.0705463

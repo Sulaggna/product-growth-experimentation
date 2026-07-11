@@ -1,0 +1,8 @@
+dimension,segment,metric,control,treatment,abs_diff,rel_diff,ci_low,ci_high,p_value,n_control,n_treatment,method,p_bh
+platform,android,platform=android,0.342368,0.394338,0.05197,0.151796,0.0294061,0.0745338,6.54826e-06,3505,3497,two-proportion z-test,4.58378e-05
+platform,ios,platform=ios,0.408606,0.417517,0.00891073,0.0218076,-0.0167548,0.0345763,0.49623,2812,2843,two-proportion z-test,0.49623
+acquisition_channel,influencer,acquisition_channel=influencer,0.275328,0.32904,0.053712,0.195084,0.0100472,0.0973768,0.0161394,839,854,two-proportion z-test,0.0376586
+acquisition_channel,organic,acquisition_channel=organic,0.428233,0.444554,0.0163209,0.0381122,-0.013896,0.0465378,0.289795,2111,2029,two-proportion z-test,0.338094
+acquisition_channel,paid_social,acquisition_channel=paid_social,0.307975,0.338144,0.0301695,0.097961,0.000627916,0.0597111,0.045484,1906,1940,two-proportion z-test,0.0795971
+acquisition_channel,referral,acquisition_channel=referral,0.477905,0.509061,0.0311559,0.0651926,-0.0249721,0.0872839,0.27685,611,607,two-proportion z-test,0.338094
+acquisition_channel,search,acquisition_channel=search,0.394118,0.459341,0.065223,0.165491,0.0190977,0.111348,0.00571676,850,910,two-proportion z-test,0.0200087
