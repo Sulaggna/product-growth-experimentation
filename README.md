@@ -160,6 +160,15 @@ All 20 figures are in [reports/figures](reports/figures), the tables behind them
 [notebooks/01_growth_analysis_walkthrough.ipynb](notebooks/01_growth_analysis_walkthrough.ipynb)
 goes through everything step by step.
 
+## Dashboard
+
+`make dashboard` opens a Streamlit app on the warehouse with filters for signup date,
+channel and platform, and tabs for acquisition, retention, both experiments, revenue and
+marketing.
+
+![Dashboard overview](docs/dashboard_overview.jpg)
+![Dashboard experiments tab](docs/dashboard_experiments.jpg)
+
 ## How it is built
 
 1. `simulate.py` writes raw parquet tables to `data/raw/` and the true effects to `data/ground_truth.json`.
